@@ -16,7 +16,9 @@ import edu.blackburn.cs.cs212.restaurantbase.Receipt;
 public class Runner {
 
     /**
-     * @param args the command line arguments ESTIMATE 4 hours Current
+     * 
+     * @param args the command line arguments ESTIMATE 4 hours 
+     * took 2
      */
     public static void main(String[] args) {
         Measurement measurement;
