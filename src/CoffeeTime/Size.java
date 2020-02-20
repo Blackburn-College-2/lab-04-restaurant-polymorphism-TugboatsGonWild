@@ -4,23 +4,36 @@
  * and open the template in the editor.
  */
 package CoffeeTime;
+
 import edu.blackburn.cs.cs212.restaurantbase.*;
+
 /**
  *
  * @author wesley.mcmillen
  */
-public class Size extends Measurement{
-    public Size(String name){
-        
+public class Size extends Measurement {
+
+    public Size(String name) {
+
     }
-    public String getName(){
-        String string="";
+
+    /**
+     *
+     * @return name of size
+     */
+    public String getName() {
+        String string = "";
         return string;
     }
+
+    /**
+     * not used
+     *
+     * @return
+     */
     @Override
     public String toString() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
+
 }

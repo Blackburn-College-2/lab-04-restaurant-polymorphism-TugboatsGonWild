@@ -16,25 +16,37 @@ import edu.blackburn.cs.cs212.restaurantbase.Receipt;
 public class Runner {
 
     /**
-     * @param args the command line arguments
-     * ESTIMATE 2.5 hours
-     * Current 1.75
+     * @param args the command line arguments ESTIMATE 4 hours Current
      */
     public static void main(String[] args) {
         Measurement measurement;
         Money money;
-        Coffee coffee1 = new Coffee("Java", new Size("Medium"), new Money(6));
-        Coffee coffee2 = new Coffee("C++", new Size("Medium"), new Money(15));
-        Coffee coffee3 = new Coffee("JavaScript", new Size("Medium"), new Money(4));
-        Coffee coffee4 = new Coffee("Python", new Size("Medium"), new Money(5));
-        Coffee coffee5 = new Coffee("Obama", new Size("Large"), new Money(420));
+        FancyCoffee coffee1 = new FancyCoffee("HotMama", new Size("Medium"),
+                new Money(7.75));
+        FancyCoffee coffee2 = new FancyCoffee("ColdDaddy", new Size("X-Small"),
+                new Money(4));
+        Syrup syrup1 = new Syrup("Chocolate drizzle", new Money(.75));
+        Syrup syrup2 = new Syrup("Caramel", new Money(.75));
         Receipt receipt = new Receipt();
         receipt.add(coffee1);
         receipt.add(coffee2);
-        receipt.add(coffee3);
-        receipt.add(coffee4);
-        receipt.add(coffee5);
+        receipt.add(syrup1);
+        receipt.add(syrup2);
         receipt.prepare();
+        System.out.println("Total: $" + receipt.getTotalPrice().getAmount());
+        System.out.println("");
+        Sandwich sandwich1 = new Sandwich(new Money(5));
+        Sandwich sandwich2 = new Sandwich(new Money(5));
+        Topping topping = new Topping("BBQ sauce", new Money(1));
+        Meat meat = new Meat("Bacon", new Money(1.25));
+        Receipt receipt2 = new Receipt();
+        receipt2.add(sandwich1);
+        receipt2.add(sandwich2);
+        receipt2.add(meat);
+        receipt2.add(topping);
+        receipt2.prepare();
+        System.out.println("Total: $" + receipt2.getTotalPrice().getAmount());
+
     }
-    
+
 }
